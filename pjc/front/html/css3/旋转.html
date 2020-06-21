@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>旋转</title>
+        <style type="text/css">
+            div {
+                width: 100px;
+                height: 75px;
+                background-color: #ccc;
+                border: 1px solid black;
+            }
+
+            #scaleDiv{
+                /*只设置一个代表 水平 垂直一起放大1.2倍*/
+                transform: scale(1.2);
+            }
+
+            #rotateDiv {
+                /*两个会相互覆盖*/
+                /*transform: scale(1.2);*/
+                transform: rotate(30deg);
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="scaleDiv">Web 前端开发</div>
+            <div id="rotateDiv">Web 前端开发</div>
+        </div>
+    </body>
+</html>

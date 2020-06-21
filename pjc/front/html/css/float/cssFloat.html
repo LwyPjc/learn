@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>float box</title>
+        <style type="text/css">
+            div{
+                width: 200px;
+                height: 200px;
+                border: 1px solid gray;
+                /*向左浮动 脱离了文档流*/
+                /*float: left;*/
+            }
+            #box1{
+                width: 200px;
+                height: 200px;
+                border: 1px solid gray;
+                /*浮动 脱离了文档流*/
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "box1">hello wow</div>
+        <div id = "box2">sure wow</div>
+        <div id = "box3">yeah right</div>
+    </body>
+</html>

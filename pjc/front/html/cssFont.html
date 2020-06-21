@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>文本样式</title>
+        <!--内联样式，在head里-->
+        <style type="text/css">
+            h1 {
+                letter-spacing: 2px;
+            }
+
+            h2 {
+                letter-spacing: -3px;
+            }
+
+            p {
+                /*height: 40px;*/
+                letter-spacing: 0.3em;
+                font-size: 22px;
+                line-height: 1.5em;
+                text-indent: 2em;
+                color: chocolate;
+                background: black;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            body {
+                background-color: rgb(255, 255, 255);
+            }
+
+            .inside {
+                list-style: inside url(../images/two.jpg);
+            }
+
+            .outside {
+                list-style-position: outside;
+            }
+
+            /*背景图片的填充*/
+            .back {
+                height: 305px;
+                width: 555px;
+                background: url("../images/two.jpg") repeat;
+            }
+
+            /*超链接标签，伪类选择器  顺序：未访问过的--》访问过的---》悬停的--》按下鼠标 */
+            a:link {
+                text-decoration: none; /*没有下划线装饰*/
+                color: #09f;
+            }
+
+            a:visited {
+                text-decoration: none;
+                color: #930;
+            }
+
+            a:hover {
+                /*鼠标悬停，放大字体*/
+                font-size: 150%;
+                text-decoration: underline;
+                color: #03c;
+            }
+
+            a:active {
+                text-decoration: none;
+                color: #03c;
+            }
+            /*测试盒子 以内容为中心  */
+            #box {
+                /*内容所在的位置*/
+                width: 100px;
+                height: 100px;
+                /* 盒子边框 border
+                 border-width: px thin 细 medium 中 thick 粗
+                 border-style: dashed 小横线 dotted 点 solid 实线 double 双实线
+                 border-color:
+                 border: width style color
+                 */
+                border: 1px dotted;
+                /*宽里的内容距离边框的距离*/
+                padding: 200px;
+                /*边框距离其它内容的边距*/
+                margin: 100px;
+                /*盒子内容超出边界的话*/
+                overflow: auto;/* hidden超出部分不可见 scroll 出现滚动条 auto 如果有超出，显示滚动条 */
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1> 万冥来朝 </h1>
+        <h2> 一品来员 </h2>
+
+        <div class="one">
+            <p>
+                尼玛，不过短短半年的时间，就弄走了李志，那可是公司相当元老级别的元老呢，跟着老爷子的时间也就比年书意晚一些罢了，结果竟然因为背叛夜氏而被赶出去，只能说这位小小姐手段强横，竟然能查出那么久远的事情来！
+            </p>
+            <p>
+                于是众人的内心越发忐忑，人就是这种东西，总会本能地惧怕强者，欺负弱者。
+                <br/><a href="https://www.baidu.com">ok，我要按下了</a>
+            </p>
+        </div>
+        <hr/>
+        <ul class="inside">
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+        </ul>
+
+        <ul class="outside">
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+        </ul>
+        <!--行内样式-->
+        <p type="color:red">
+            这是行内样式
+        </p>
+        <!--测试填充-->
+        <div class="back">
+            hello,are you ok nice man
+        </div>
+        <!--盒子测试-->
+        <div id="box">
+            这是一个盒子哦！当盒子内容益处盒子柏楠姐扩大解放快来解放昆仑山搭街坊发生的恢复健康的回复框上开发和看见反函数决定恢复何时开放经济快速返还开始就
+            对数据库副书记开发接口是否健康数据返回酒店发货
+        </div>
+    </body>
+</html>

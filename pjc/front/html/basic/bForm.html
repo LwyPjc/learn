@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>test form</title>
+    </head>
+    <body>
+        <div id="one" align="center">
+            <form action="#" method="post">
+                用户名：<input type="text" name="userName"/>
+                <br/>
+                密码：&nbsp;&nbsp;&nbsp;<input type="password" name="password">
+                <br/>
+                爱好：<input type="text">
+                <br/>
+                性别：
+                <input type="radio" value="男" name="sex" checked="checked">
+                <input type="radio" value="女" name="sex">
+                <br/>
+                爱好：
+                <input type="checkbox" value="01" name="computer" checked="checked"> 电脑
+                <input type="checkbox" value="02" name="phone"> 手机
+                <input type="checkbox" value="03" name="cup"> 杯子
+                <input type="checkbox" value="04" name="glass"> 镜子
+                <br/>
+                下拉列表：
+                <select>
+                    <option value="01" name="book" selected="selected">看书</option>
+                    <option value="02" name="papers">看报</option>
+                    <option value="03" name="hand">看手</option>
+                </select>
+                <br />
+                <textarea row="30" cols="30" name="textArea"> 默认 </textarea>
+                <br />
+                <input type="submit" value="提交" name="submitButton"/>
+                &nbsp;&nbsp;
+                <input type="reset" value="重置" name="resetButton"/>
+            </form>
+        </div>
+    </body>
+</html>

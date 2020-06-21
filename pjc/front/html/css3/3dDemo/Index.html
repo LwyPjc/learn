@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style type="text/css">
+            /*浏览器样式清除*/
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                background-color: #0066ff;
+            }
+            #piclist{
+                width: 760px;
+                height: 720px;
+                /*上右下左*/
+                margin: 100px auto;
+                border: 1px solid black;
+            }
+            /*父容器样式*/
+            .picbox{
+                float: left;
+                width: 170px;
+                height: 190px;
+                margin: 10px;
+                position: relative;
+                /*设置3D变化*/
+                transform-style: preserve-3d;
+                transition: 1.5s;
+            }
+            .picbox:hover{
+                transform:rotateY(180deg);
+            }
+            .face{
+                width: 170px;
+                height: 190px;
+                position: absolute;
+            }
+            .front{
+                border: 2px solid #4b2618;
+            }
+            .back{
+                background-color: #4b2618;
+                border: 2px solid #fff;
+                /*初始状态下翻转180 光标移上去后再翻回来*/
+                transform: rotateY(180deg);
+            }
+            .back h3{
+                color: #ffffff;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="piclist">
+            <div class="picbox">
+                <div class="face front">
+                    <img src="../../../images/1.jpg">
+                </div>
+                <!--背面-->
+                <div class="face back">
+                    <h3>浓缩咖啡</h3>
+                </div>
+            </div>
+
+            <div class="picbox">
+                <div class="face front">
+                    <img src="../../../images/2.jpg">
+                </div>
+                <!--背面-->
+                <div class="face back">
+                    <h3>浓缩咖啡</h3>
+                </div>
+            </div>
+
+            <div class="picbox">
+                <div class="face front">
+                    <img src="../../../images/3.jpg">
+                </div>
+                <!--背面-->
+                <div class="face back">
+                    <h3>浓缩咖啡</h3>
+                </div>
+            </div>
+
+            <div class="picbox">
+                <div class="face front">
+                    <img src="../../../images/4.jpg">
+                </div>
+                <!--背面-->
+                <div class="face back">
+                    <h3>浓缩咖啡</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

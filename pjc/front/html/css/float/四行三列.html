@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>上中下</title>
+        <style type="text/css">
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            body{
+                font-size: 14px;
+            }
+            #container{
+                margin: 0 auto;
+                width: 900px;
+            }
+            #header{
+                height: 100px;
+                background: #6cf;
+                margin-bottom: 5px;
+            }
+            #nav{
+                height: 30px;
+                background: #09c;
+                margin-bottom: 5px;
+            }
+            #main{
+                height: 500px;
+                margin-bottom: 5px;
+            }
+            .aside{
+                float: left;
+                width: 100px;
+                height: 500px;
+                background: #0066ff;
+            }
+            #aside1{
+
+            }
+            #aside2{
+                margin-left: 5px;
+            }
+            #content{
+                float: left;
+                margin-left: 5px;
+                width: 690px;
+                height: 500px;
+            }
+            #footer{
+                height: 60px;
+                background: #6cf;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header"></div>
+            <div id="nav"></div>
+            <div id="main">
+                <!--左边条 公共样式 用class-->
+                <div id="aside1" class="aside"></div>
+                <div id="content"></div>
+                <!--右边条-->
+                <div id="aside2" class="aside"></div>
+            </div>
+            <div id="footer"></div>
+        </div>
+    </body>
+</html>

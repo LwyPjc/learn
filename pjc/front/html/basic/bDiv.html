@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>test div</title>
+
+        <!-- 也是放在head标签中 下面是外链css rel 要连接到 stylesheet样式表文件 href：相对位置 -->
+        <link rel="stylesheet" href="css/style.css"/>
+
+        <!-- 下面是内嵌样式 -->
+        <!--<style type="text/css">-->
+            <!--div{-->
+                <!--color:green;-->
+            <!--}-->
+            <!--h2{-->
+                <!--color:yellow;-->
+            <!--}-->
+        <!--</style>-->
+        <style type="text/css">
+            table{
+                border-collapse: collapse;
+            }
+            tr:nth-child(odd){
+                background-color:#EAF2D3;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center"> 魔鬼板块</h1>
+        <div id="cc" align="center">
+            <h2>傻蛋的归傻蛋</h2>
+            <div id="author">
+                Micheal Pan
+            </div>
+            <!-- 下面是行内样式添加方法 -->
+            <div id="content" style="color:blue;">
+                这寂灭的世界，如影随形，空空如也，不过如此！
+            </div>
+            <hr/>
+            下面是无序列表
+            <ul>
+                <li>one</li>
+                <li>two</li>
+            </ul>
+            下面是有序列表
+
+            <p>
+            <ol>
+                <li>one</li>
+                <li>two</li>
+            </ol>
+            </p>
+            <hr/>
+            下面是表格
+            <table border="1" >
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>6</th>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+
+            <p>
+                <em>强调</em>  <br />
+                <i>斜体，无语义</i>
+            </p>
+            <p>
+                <strong>重点强调</strong>  <br />
+                <b>粗体，无语义</b>
+            </p>
+            <dl>
+                <dt>HTML</dt>
+                <dd>超文本标记语言</dd>
+                <dt>CSS</dt>
+                <dd>层叠样式表</dd>
+            </dl>
+
+        </div>
+
+    </body>
+</html>

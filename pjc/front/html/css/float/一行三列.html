@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--三段式布局-->
+    <head>
+        <meta charset="UTF-8">
+        <title>mysite</title>
+        <style type="text/css">
+            /*对浏览器默认样式清零*/
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            body{
+                font-size: 14px;
+            }
+            #container{
+                margin: 0 auto;
+                width: 1000px;
+                height: 500px;
+                /*background: #06f;*/
+            }
+            #header{
+                /*不设置的默认为父元素的属性*/
+                height: 100px;
+                background-color: #0066ff;
+                /* header 和 main 做一个空白分割*/
+                margin-bottom: 5px;
+            }
+            #main{
+                height: 500px;
+                background-color: #cff;
+                margin-bottom: 5px;
+            }
+            #footer{
+                height: 60px;
+                background-color: #0066ff;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header"></div>
+            <div id="main"></div>
+            <div id="footer"></div>
+        </div>
+    </body>
+</html>
