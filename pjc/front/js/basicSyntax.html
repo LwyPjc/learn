@@ -14,5 +14,44 @@
             document.write('<b>欢迎</b><br><h2>标题</h2>');
             console.log('脚本执行结束');
         </script>
+
+        <!-- EMA JS -->
+        <script>
+            // 数组
+            var a = [1,2,3,4,5];
+            var sum = 0;
+            for(var i = 0;i<a.length;i++){
+                sum+=a[i];
+            }
+            document.write(sum);
+        </script>
+
+        <hr>
+
+        <!-- DOM -->
+        <p id = "changeStyle">通过DOM改变样式，字号变为48px</p>
+        <button onclick="document.getElementById('changeStyle').style.fontSize='48px'">
+            点击改变字号
+        </button>
+
+        <!-- BOM -->
+        <script>
+            function load() {
+                window.open('http://www.baidu.com','_blank','width=800,height=800,top=100px,left=100px')
+            }
+        </script>
+        <button onclick="load()">百度</button>
+        <br>
+
+        <!--写js 的方式-->
+        <button onclick="alert('行内js')">行内js</button>
+
+        <br>
+        <!--内嵌js-->
+        <script>
+            alert('内嵌js');
+        </script>
+        <!--外部js-->
+        <script src="script/basic.js"></script>
     </body>
 </html>
