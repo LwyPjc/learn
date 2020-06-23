@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>数组</title>
+    </head>
+    <body>
+        <script>
+            var dd = ["aa", "bb", 12];
+            dd[3] = 'three';
+            console.log(dd[2]);
+            console.log(dd.length);
+            console.log('=================ForEach=======================');
+            // forEach
+            dd.forEach(value => {
+                console.log(value);
+            });
+
+            console.log('=================For=======================');
+            for (var i = 0; i < dd.length; i++) {
+                // document.getElementsByTagName('body')
+                console.log(dd[i]);
+            }
+
+            console.log('========================================');
+            // 关联数组
+            var info = [];
+            info['one'] = 'linux';
+            info[2] = 4;
+            info.forEach((x, y) => {
+                console.log(info[y])
+            });
+            console.log('==========================================');
+            for (var key in info) {
+                console.log(info[key]);
+            }
+            console.log('==========================================');
+        </script>
+
+
+    </body>
+</html>
