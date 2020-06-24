@@ -14,6 +14,16 @@ public class BubbleSort {
     // 待排数组
     private int[] unSortNumbers;
 
+
+    /**
+     * 每日一练
+     */
+    @Test
+    public void test(){
+
+    }
+
+
     @Before
     public void init() {
         unSortNumbers = RandomUtils.randomArrays(10, 20, 100);
@@ -75,6 +85,7 @@ public class BubbleSort {
 
     /**
      * 每次都从最后一个元素开始遍历
+     *
      * @Version 3
      * TODO 优化
      */
@@ -94,5 +105,43 @@ public class BubbleSort {
     }
 
 
+    /**
+     * @Version 1
+     * ArrayIndexOutOfBoundsException
+     */
+    @Test
+    @SuppressWarnings("all")
+    public void bubleSortMaxInLastOne() {
+        for (int i = 0; i < unSortNumbers.length; i++) {
+            for (int j = 0; j < unSortNumbers.length - i; j++) {
+                if (unSortNumbers[j] > unSortNumbers[j + 1]) {
+                    // 交换
+                    int temp = unSortNumbers[j+1];
+                    unSortNumbers[j+1] = unSortNumbers[j];
+                    unSortNumbers[j] = temp;
+                }
+            }
+        }
+    }
+
+    /**
+     * @Version 2
+     * ArrayIndexOutOfBoundsException
+     * 最外层循环 一共有多少个元素要排
+     */
+    @Test
+    @SuppressWarnings("all")
+    public void bubleSortMaxInLastTwo() {
+        for (int i = 1; i < unSortNumbers.length; i++) {
+            for (int j = 0; j < unSortNumbers.length - i; j++) {
+                if (unSortNumbers[j] > unSortNumbers[j + 1]) {
+                    // 交换
+                    int temp = unSortNumbers[j+1];
+                    unSortNumbers[j+1] = unSortNumbers[j];
+                    unSortNumbers[j] = temp;
+                }
+            }
+        }
+    }
 
 }
