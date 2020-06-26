@@ -14,6 +14,13 @@ public class BubbleSort {
     // 待排数组
     private int[] unSortNumbers;
 
+    public int[] getUnSortNumbers() {
+        return unSortNumbers;
+    }
+
+    public void setUnSortNumbers(int[] unSortNumbers) {
+        this.unSortNumbers = unSortNumbers;
+    }
 
     /**
      * 每日一练

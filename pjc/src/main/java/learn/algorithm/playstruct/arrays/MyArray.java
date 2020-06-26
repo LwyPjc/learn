@@ -1,4 +1,4 @@
-package learn.algorithm.arrays;
+package learn.algorithm.playstruct.arrays;
 
 /**
  * 自定义 数组

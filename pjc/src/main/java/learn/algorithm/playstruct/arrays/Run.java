@@ -1,4 +1,4 @@
-package learn.algorithm.arrays;
+package learn.algorithm.playstruct.arrays;
 
 import org.junit.Test;
 
