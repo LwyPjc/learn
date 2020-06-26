@@ -75,7 +75,7 @@ class Solution {
 //leetcode submit region end(Prohibit modification and deletion)
 
 
-public class validParathress {
+public class A20validParathress {
 
     @Test
     public void test(){
