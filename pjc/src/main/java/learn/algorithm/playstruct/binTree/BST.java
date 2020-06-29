@@ -1,5 +1,7 @@
 package learn.algorithm.playstruct.binTree;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -202,6 +204,27 @@ public class BST<E extends Comparable<E>> {
     }
 
     /**
+     * 层序遍历
+     * 借用队列
+     */
+    public void layerOrder() {
+        Queue<Node> queue = new ArrayDeque<>();
+        if (root != null) {
+            queue.add(root);
+        }
+        while (!queue.isEmpty()) {
+            Node remove = queue.remove();
+            System.out.println(remove.e);
+            if (remove.left != null) {
+                queue.add(remove.left);
+            }
+            if (remove.right != null) {
+                queue.add(remove.right);
+            }
+        }
+    }
+
+    /**
      * 前序遍历非递归写法
      * 借用栈
      *
@@ -227,7 +250,8 @@ public class BST<E extends Comparable<E>> {
      *
      * @return
      */
-    public void midOrderUseLoop() {}
+    public void midOrderUseLoop() {
+    }
 
     /**
      * 后序遍历 非递归写法
@@ -235,7 +259,8 @@ public class BST<E extends Comparable<E>> {
      *
      * @return
      */
-    public void afterOrderUseLoop() {}
+    public void afterOrderUseLoop() {
+    }
 
     @Override
     public String toString() {

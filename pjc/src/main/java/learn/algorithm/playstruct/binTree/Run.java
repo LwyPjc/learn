@@ -9,6 +9,9 @@ public class Run {
 
     /**
      * 测试前序遍历
+     * 5
+     * 3  6
+     * 2 4  null  8
      */
     @Test
     public void testPreOrder() {
@@ -26,6 +29,8 @@ public class Run {
         bst.afterOrder();
         System.out.println("====== 非递归 前序 ======");
         bst.preOrderUseLoop();
+        System.out.println("====层序遍历=======");
+        bst.layerOrder();
     }
 
 }
