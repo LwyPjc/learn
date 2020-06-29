@@ -31,6 +31,14 @@ public class Run {
         bst.preOrderUseLoop();
         System.out.println("====层序遍历=======");
         bst.layerOrder();
+        System.out.println("====最小元素====");
+        System.out.println(bst.minimum());
+        System.out.println("====最大元素====");
+        System.out.println(bst.maximum());
+        System.out.println("====删除最小元素======");
+        bst.removeMin();
+        System.out.println("====层序遍历=======");
+        bst.layerOrder();
     }
 
 }

@@ -262,6 +262,217 @@ public class BST<E extends Comparable<E>> {
     public void afterOrderUseLoop() {
     }
 
+    /**
+     * 寻找二分搜索树的最小元素
+     *
+     * @return
+     */
+    public E minimum() {
+        if (size == 0)
+            throw new IllegalArgumentException("BST is empty");
+
+        Node minNode = minimum(root);
+        return minNode.e;
+    }
+
+    /**
+     * 返回以node为根的二分搜索树的最小值所在的节点
+     *
+     * @param node
+     * @return
+     */
+    private Node minimum(Node node) {
+        if (node.left == null)
+            return node;
+
+        return minimum(node.left);
+    }
+
+    /**
+     * 寻找二分搜索树的最大元素
+     *
+     * @return
+     */
+    public E maximum() {
+        if (size == 0)
+            throw new IllegalArgumentException("BST is empty");
+
+        return maximum(root).e;
+    }
+
+    /**
+     * 返回以node为根的二分搜索树的最大值所在的节点
+     *
+     * @param node
+     * @return
+     */
+    private Node maximum(Node node) {
+        if (node.right == null)
+            return node;
+
+        return maximum(node.right);
+    }
+
+    /**
+     * 删除最小元素
+     *
+     * @return
+     */
+    public E removeMin() {
+        E minimum = this.minimum();
+        // 带一个上层节点
+//        removeMin(root, root.left);
+
+        removeMin(root);
+
+        return minimum;
+    }
+
+    /**
+     * 递归删除 最小元素
+     * 这种方式不是很好吧
+     *
+     * @param upNode 上层节点
+     * @param node
+     * @return
+     * @Version 1
+     */
+    private void removeMin(Node upNode, Node node) {
+        if (node.left == null) {
+            // 要删的节点
+            if (node.right != null) {
+                upNode.left = node.right;
+            } else {
+                upNode.left = null;
+            }
+            return;
+        }
+        upNode = node;
+        removeMin(upNode, node.left);
+    }
+
+    /**
+     * 递归删除最小元素
+     * 返回删除节点后新的二分搜索树的根
+     *
+     * @param node
+     * @return
+     * @Version 2
+     */
+    private Node removeMin(Node node) {
+        // 要删的节点
+        if (node.left == null) {
+            Node ret = node.right;
+            node.right = null;
+            size--;
+            return ret;
+        }
+        node.left = removeMin(node.left);
+        return node;
+    }
+
+    /**
+     * 删除最大元素
+     *
+     * @return
+     */
+    public E removeMax() {
+        E maximum = this.maximum();
+        removeMax(root);
+
+        return maximum;
+    }
+
+    /**
+     * 递归删除 最大元素
+     *
+     * @param node
+     * @return
+     */
+    private Node removeMax(Node node) {
+        if (node.right == null) {
+            Node left = node.left;
+            node.left = null;
+            size--;
+            return left;
+        }
+        node.right = removeMax(node.right);
+        return node;
+    }
+
+    /**
+     * 删除元素
+     * 既有左孩子，也有右孩子，则找出比被删除节点大一点的节点替换上来
+     * 只有左孩子
+     * 只有右孩子
+     *
+     * @return
+     */
+    public E remove(E e) {
+        Node remove = remove(root, e);
+        return remove == null ? null : remove.e;
+    }
+
+    /**
+     * 递归删除某节点
+     *
+     * @return
+     */
+    private Node remove(Node node, E e) {
+        if (node == null) {
+            // 找不到要删的元素
+            return null;
+        }
+        if (e.compareTo(node.e) == 0) {
+            // 找到了要删的元素
+            Node ret = null;
+            // 只有左子树
+            if (node.right == null) {
+                ret = node.left;
+                node.left = null;
+            } else if (node.left == null) {
+                // 只有右子树
+                ret = node.right;
+                node.right = null;
+            } else {
+                // 左右都有子树 在比要删的元素要大中找出最小的 subRoot 是要移动的前一个节点， 使用其后继
+                //不用递归
+//                Node subRoot = node.right;
+//                if (subRoot.left != null) {
+//                    while (subRoot.left.left != null) {
+//                        subRoot = subRoot.right;
+//                    }
+//                }
+//                Node needMove = subRoot.left;
+//                subRoot.left = needMove.right;
+//                needMove.right = node.right;
+//                needMove.left = node.left;
+//                return needMove;
+
+                // 递归写法
+                // 找出最小值所在节点
+                Node minimum = minimum(node.right);
+                // 删除最小值送在节点
+                removeMin(node.right);
+                size++;// 多减了
+                minimum.right = node.right;
+                minimum.left = node.left;
+                node.left = node.right = null;
+                return minimum;
+            }
+
+            size--;
+            return ret;
+        } else if (e.compareTo(node.e) < 0) {
+            // 比节点小
+            node.left = remove(node.left, e);
+        } else if (e.compareTo(node.e) > 0) {
+            // 比节点大
+            node.right = remove(node.right, e);
+        }
+        return node;
+    }
+
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
