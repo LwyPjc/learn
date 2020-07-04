@@ -359,6 +359,7 @@ public class BST<E extends Comparable<E>> {
      * @return
      * @Version 2
      */
+    @SuppressWarnings("all")
     private Node removeMin(Node node) {
         // 要删的节点
         if (node.left == null) {
