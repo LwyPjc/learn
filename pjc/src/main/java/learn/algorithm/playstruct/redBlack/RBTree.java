@@ -142,12 +142,13 @@ public class RBTree<K extends Comparable<K>, V> {
         else // key.compareTo(node.key) == 0
             node.value = value;
 
+        // 需要左旋转
         if (isRed(node.right) && !isRed(node.left))
             node = leftRotate(node);
-
+        // 需要右旋转
         if (isRed(node.left) && isRed(node.left.left))
             node = rightRotate(node);
-
+        // 需要颜色翻转
         if (isRed(node.left) && isRed(node.right))
             flipColors(node);
         return node;
