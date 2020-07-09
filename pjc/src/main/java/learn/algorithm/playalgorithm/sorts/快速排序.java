@@ -147,12 +147,13 @@ public class 快速排序 {
         int i = l + 1, j = r;
 
         while (true) {
-            while (i <= r && arr[i] < temp) {
+            while (i <= j && arr[i] < temp) {
                 i++;
             }
-            while (j > l + 1 && arr[j] > temp) {
+            while (j > i && arr[j] > temp) {
                 j--;
             }
+            // TODO 这一步挺重要的
             if (i > j) {
                 break;
             }
