@@ -1,6 +1,6 @@
 package learn.algorithm.finds;
 
-import learn.algorithm.sorts.BubbleSort;
+import learn.algorithm.playalgorithm.sorts.BubbleSort;
 import org.junit.Before;
 import org.junit.Test;
 import tools.PrintStreamUtil;

@@ -1,4 +1,4 @@
-package learn.algorithm.sorts;
+package learn.algorithm.playalgorithm.sorts;
 
 import org.junit.After;
 import org.junit.Before;

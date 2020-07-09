@@ -137,8 +137,8 @@ public class RandomUtils {
          * 取出一个给定的随机数
          */
         Random random = new Random(System.currentTimeMillis());
-        int length = ThreadLocalRandom.current().nextInt(maxLength,maxLength+1);
-//        int length = random.ints(1, maxLength, maxLength + 1).parallel().findFirst().getAsInt(); 这个不行啊
+        int length = ThreadLocalRandom.current().nextInt(minLength, maxLength + 1);
+//        int length = random.ints(1, maxLength, maxLength + 1).parallel().findFirst().getAsInt(); 这个不行?多试几次
         int[] result = new int[length];
         IntStream.range(0, length).forEach(
                 i -> result[i] = random.nextInt(bound < 1 ? Integer.MAX_VALUE : bound)
@@ -180,7 +180,7 @@ public class RandomUtils {
 
     @Test
     public void test() {
-        int[] ints = randomArrays(10, 20,100);
+        int[] ints = randomArrays(10, 20, 100);
         System.out.println(ints.length);
         for (int i = 0; i < 10; i++) {
             System.out.println(ints[i]);
@@ -188,12 +188,23 @@ public class RandomUtils {
     }
 
     @Test
-    public void testRandom(){
+    public void testRandom() {
         int randomNum = ThreadLocalRandom.current().nextInt(10, 33 + 1);
 //        System.out.println(randomNum);
 
-        for(int i=0;i<100;i++){
+        for (int i = 0; i < 100; i++) {
             System.out.println(ThreadLocalRandom.current().nextInt(10, 33 + 1));
+        }
+    }
+
+
+    @Test
+    public void testRandomInt() {
+        int[] unSortNumbers;
+        int n = 10;
+        for (int i = 0; i < n; i++) {
+            unSortNumbers = RandomUtils.randomArrays(10, 20, 100);
+            System.out.println(unSortNumbers.length);
         }
     }
 }
