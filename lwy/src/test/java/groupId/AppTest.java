@@ -1,9 +1,14 @@
 package groupId;
 
+import com.alibaba.fastjson.JSON;
+import goodbye996.lambda.demo1.sort.CartService;
+import goodbye996.lambda.demo1.sort.Sku;
 import org.junit.Test;
 import worker.test.Hanota;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
@@ -55,5 +60,18 @@ public class AppTest
         }else{
             System.out.println("2000.00<2000");
         }
+    }
+
+    @Test
+    public void compareTest(){
+        List<Sku> cartLists = CartService.getCartSkuList();
+        Collections.sort(cartLists, new Comparator<Sku>() {
+            @Override
+            public int compare(Sku o1, Sku o2) {
+                return o1.getSkuPrice().compareTo(o2.getSkuPrice());
+            }
+        });
+
+        System.out.println(JSON.toJSONString(cartLists,true));
     }
 }

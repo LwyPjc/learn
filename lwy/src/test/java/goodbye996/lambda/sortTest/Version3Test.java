@@ -1,9 +1,9 @@
-package lambda.test;
+package goodbye996.lambda.sortTest;
 
 import com.alibaba.fastjson.JSON;
-import goodbye996.lambda.ImpService.SkuTotalPricePredicate;
-import goodbye996.lambda.sort.CartService;
-import goodbye996.lambda.sort.Sku;
+import goodbye996.lambda.demo1.ImpService.SkuTotalPricePredicate;
+import goodbye996.lambda.demo1.sort.CartService;
+import goodbye996.lambda.demo1.sort.Sku;
 import org.junit.Test;
 
 import java.util.List;

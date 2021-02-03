@@ -1,6 +1,6 @@
-package goodbye996.lambda.sort;
+package goodbye996.lambda.demo1.sort;
 
-import goodbye996.lambda.service.SkuPredicate;
+import goodbye996.lambda.demo1.service.SkuPredicate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -89,8 +89,7 @@ public class CartService {
      * @param predicate - 不停的Sku判断标准策略
      * @return
      */
-    public static List<Sku> filterCart(
-            List<Sku> cartSkuList, SkuPredicate predicate){
+    public static List<Sku> filterCart( List<Sku> cartSkuList, SkuPredicate predicate){
         List<Sku> result = new ArrayList<>();
         for (Sku sku:cartSkuList){
             //根据不同的Sku判断标准策略，对Sku进行判断

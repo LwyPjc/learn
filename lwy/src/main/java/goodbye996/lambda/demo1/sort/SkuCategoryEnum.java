@@ -1,4 +1,4 @@
-package goodbye996.lambda.sort;
+package goodbye996.lambda.demo1.sort;
 
 public enum SkuCategoryEnum {
     CLOTHING(10,"服装类" ),

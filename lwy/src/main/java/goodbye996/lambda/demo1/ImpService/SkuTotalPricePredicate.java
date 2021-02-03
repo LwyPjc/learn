@@ -1,7 +1,7 @@
-package goodbye996.lambda.ImpService;
+package goodbye996.lambda.demo1.ImpService;
 
-import goodbye996.lambda.service.SkuPredicate;
-import goodbye996.lambda.sort.Sku;
+import goodbye996.lambda.demo1.service.SkuPredicate;
+import goodbye996.lambda.demo1.sort.Sku;
 
 /**
  * 对Sku的总价是否超出2000作为判断标准

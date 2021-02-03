@@ -1,8 +1,8 @@
 package com.springsecurity.application.config;
 
-import org.springframework.boot.autoconfigure.security.servlet.WebSecurityEnablerConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
@@ -21,5 +21,11 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
         //关闭默认csrf认证
         http.csrf().disable();
+    }
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        //设置不拦截
+        web.ignoring().antMatchers("/js/**","/css/**","images/**");
     }
 }

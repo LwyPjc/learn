@@ -1,4 +1,4 @@
-package goodbye996.lambda.sort;
+package goodbye996.lambda.demo1.sort;
 
 /**
  * 下单商品信息对象
