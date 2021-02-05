@@ -7,10 +7,7 @@ import goodbye996.lambda.demo1.sort.SkuCategoryEnum;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class StreamOperator {
 
@@ -167,10 +164,40 @@ public class StreamOperator {
         System.out.println(JSON.toJSONString(optional.get(),true));
     }
 
+    /**
+     * max()
+     */
     @Test
     public void mapToDouble(){
 //        skuList.stream()
 //                .map(Sku::getTotalPrice)
 //                .forEach(item-> System.out.println(item+"\n"));
+        OptionalDouble optionalDouble= skuList.stream()
+                //获取总价
+                .mapToDouble(Sku::getSkuPrice)
+                .max();
+        System.out.println(optionalDouble.getAsDouble());
+
+    }
+
+    /**
+     * min()
+     */
+    @Test
+    public void min(){
+        OptionalDouble optionalDouble = skuList.stream()
+                .mapToDouble(Sku::getSkuPrice)
+                .min();
+        System.out.println(optionalDouble.getAsDouble());
+    }
+
+    /**
+     * 获取流元素的个数
+     */
+    @Test
+    public void countTest(){
+        long count = skuList.stream()
+                .count();
+        System.out.println(count);
     }
 }
