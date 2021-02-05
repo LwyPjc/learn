@@ -19,7 +19,7 @@ import static org.junit.Assert.assertTrue;
 public class AppTest 
 {
     /**
-     * Rigorous Test :-)
+     * Rigorous com.springsecurity.application.controller.Test :-)
      */
     @Test
     public void shouldAnswerWithTrue()
