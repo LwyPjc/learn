@@ -1,4 +1,4 @@
-package learn.algorithm;
+package learn.algorithm.play;
 
 import org.junit.Test;
 
