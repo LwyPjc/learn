@@ -1,5 +1,6 @@
 package learn.algorithm.play;
 
+import learn.algorithm.playstruct.linkList.LinkedList;
 import org.junit.Test;
 
 /**
@@ -87,6 +88,36 @@ public class Count {
             index = 0;
         }
         return index;
+    }
+
+    @Test
+    public void 链表解法() {
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        for (int i = 1; i <= 20; i++) {
+            linkedList.addLast(i);
+        }
+
+        int index = 12;
+        int cnt = 1;
+        int elemet = 0;
+        while (elemet != 19) {
+            if (cnt == 3) {
+                if (linkedList.get(index) == 19) {
+                    System.out.println("弹出" + linkedList.get(index) + "号");
+                    elemet = linkedList.get(index);
+                    break;
+                }
+                System.out.println("弹出第" + linkedList.get(index) + "号");
+                linkedList.remove(index);
+                cnt = 1;
+            } else {
+                cnt++;
+                index++;
+                if (index == linkedList.getSize()) {
+                    index = 0;
+                }
+            }
+        }
     }
 
 }
