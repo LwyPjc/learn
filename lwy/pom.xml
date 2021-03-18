@@ -48,6 +48,7 @@
             <artifactId>spring-security-config</artifactId>
             <version>5.4.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
 
     </dependencies>
 
@@ -93,12 +94,7 @@
                     <artifactId>maven-project-info-reports-plugin</artifactId>
                     <version>3.0.0</version>
                 </plugin>
-                <!--新添加的 maven中启动main函数 需要的插件plugin-->
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <version>1.6.0</version>
-                </plugin>
+
             </plugins>
         </pluginManagement>
     </build>
