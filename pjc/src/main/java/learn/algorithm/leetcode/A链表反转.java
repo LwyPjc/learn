@@ -50,7 +50,10 @@ public class A链表反转 {
         for (int i = 1; i <= right; i++) {
             if (i == left) {
                 leftNode = cusr;
-            } else if (i >= left && i <= right) {
+                i++;
+            }
+
+            if (i >= left && i <= right) {
                 temp = leftNode.next;
                 temp2 = cusr.next.next;
                 leftNode.next = cusr.next;
