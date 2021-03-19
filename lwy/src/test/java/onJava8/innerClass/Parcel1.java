@@ -8,9 +8,8 @@ public class Parcel1 {
         }
     }
 
-    class Destination{
+    class Destination extends Parcel2{
         private String label;
-
         Destination(String whereTo){
             label = whereTo;
         }
