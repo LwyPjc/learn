@@ -4,83 +4,29 @@
 
 # 资料
 
-一.前端VUE学习资源
-链接：https://pan.baidu.com/s/1ZMGQWyQE_MynyO3YciJ97A 
-提取码：ot3k 
-复制这段内容后打开百度网盘手机App，操作更方便哦
+# 厉害的博客
 
-二.前端架构师学习资源
-链接：https://pan.baidu.com/s/1Xpxj5dqdeFZ8YcR2IsKL0w 
-提取码：uck0 
-复制这段内容后打开百度网盘手机App，操作更方便哦
 
-后端学习资源：
-1.高效编程告别996
-链接：https://pan.baidu.com/s/1UO0322aFutbFoh-NjaB9aA 
-提取码：k36l
+学他写博客：
+https://www.cnkirito.moe/dubbo-gracefully-startup/
 
-2.Shiro
-链接：https://pan.baidu.com/s/1zOx-dkuaJc6X68ns51Uc3w 
-提取码：y3i3
+写清楚一件事情
 
-3.Spring
-链接：https://pan.baidu.com/s/1Azt74UnaHWe3snwlpvwUAA 
-提取码：olc4
+评论系统：https://valine.js.org/
 
-4.Mybatis
-链接：https://pan.baidu.com/s/1YjUXRUAew78H3cbQXOUd_Q 
-提取码：gy77 
+https://www.dazhuanlan.com/
 
-5.Spring Boot
-链接：https://pan.baidu.com/s/1o7B8NtTYRxrLwowYgKncsw 
-提取码：r3dj
+https://jaskey.github.io/blog/2018/08/15/rabbitmq-delay-queue/
 
-6.Spring Cloud
-链接：https://pan.baidu.com/s/1gV__wZ8ABU9cQvBpu21iJg 
-提取码：eglg
+信息安全 python 爬虫
+https://thief.one/
 
-7.Nginx
-链接：https://pan.baidu.com/s/1CKjKR_vhh2IkZh8Drp9rMw 
-提取码：u4hl
+Spirng 家
+http://www.itmuch.com/
 
-8.Redis
-链接：https://pan.baidu.com/s/1TlS1IYZkuE__SlWZFveOuw 
-提取码：jtr6
+https://blog.wuwii.com/
 
-9.ElasticSearch
-链接：https://pan.baidu.com/s/1cYP2TqUcPeZBocc67CRgRg 
-提取码：2ncj
-
-10.RabbitMQ
-链接：https://pan.baidu.com/s/18sIFM_L0SkBS_xhrVjEr7g 
-提取码：mzsc
-
-11.Linux
-链接：https://pan.baidu.com/s/1SBTVJxuFmv5fw9PNCKN4Ng 
-提取码：0ajd
-
-12.MySQL
-链接：https://pan.baidu.com/s/1nqXqdEmwuSV3pHMrSZQxUg 
-提取码：dqe4 
-
-13.网络之HTTP与HTTPS
-链接：https://pan.baidu.com/s/1fCaLN23X2R_1LpLA-BZkcw 
-提取码：eul0
-
-链接：https://pan.baidu.com/s/1aKgsvMw6-BtkwAiMjyDq8g 
-提取码：f12n
-
-14.并发编程
-链接：https://pan.baidu.com/s/1DWgac6W4IJ5Adw8ogZcUFw 
-提取码：134n
-
-二.前端学习资源：
-链接：https://pan.baidu.com/s/1Xpxj5dqdeFZ8YcR2IsKL0w 
-提取码：uck0 
-
-三. 数据结构与算法
-链接：https://pan.baidu.com/s/1OL-AhN7gvclrYlc-f14Enw 
-提取码：a2pa
+https://yelog.org/
 
 
 # 面试题
