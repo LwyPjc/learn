@@ -39,11 +39,23 @@ public class A1603停车问题 {
         public boolean addCar(int carType) {
             switch (carType) {
                 case 1:
-                    return --big >= 0;
+                    if (big > 0) {
+                        big--;
+                        return true;
+                    }
+                    return false;
                 case 2:
-                    return --medium >= 0;
+                    if (medium > 0) {
+                        medium--;
+                        return true;
+                    }
+                    return false;
                 case 3:
-                    return --small >= 0;
+                    if (small > 0) {
+                        small--;
+                        return true;
+                    }
+                    return false;
             }
             return false;
         }
