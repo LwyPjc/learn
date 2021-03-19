@@ -45,8 +45,6 @@ public class A链表反转 {
         ListNode leftNode = null;
         ListNode cursPre = null;
         ListNode cusr = null;
-        ListNode temp = null;
-        ListNode temp2 = null;
 
         ListNode listNode = new ListNode();
         listNode.next = head;
@@ -57,17 +55,11 @@ public class A链表反转 {
                 leftNode = cusr;
                 cursPre = cusr.next;
             }
-
             if (i > left && i <= right) {
-                temp = leftNode.next;
-                temp2 = cusr.next;
-                cursPre.next = temp2;
-                cusr.next = temp;
+                cursPre.next = cusr.next;
+                cusr.next = leftNode.next;
                 leftNode.next = cusr;
-                cusr = temp2;
-                if (i == right) {
-                    break;
-                }
+                cusr = cursPre.next;
             } else {
                 cusr = cusr.next;
             }
