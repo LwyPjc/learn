@@ -41,3 +41,36 @@ https://juejin.im/post/5d87985d6fb9a06add4e6ac3
 https://www.jianshu.com/p/2f7eb1ad7174
 史上最全的web前端面试题汇总及答案2
 史上最全的web前端面试题汇总及答案3
+
+# SpringBoot
+
+https://blog.csdn.net/qq_20597727/article/details/84868035
+spring源码阅读--@Transactional实现原理
+
+从@Async案例找到Spring框架的bug：exposeProxy=true不生效原因大剖析+最佳解决方案【享学Spring】
+https://cloud.tencent.com/developer/article/1497700
+
+
+SpringBoot 启动流程分析
+https://www.cnblogs.com/hello-shf/p/10976646.html
+SpringBoot启动流程分析（一）：SpringApplication类初始化过程
+
+
+涉及@Async AopContext 线程绑定
+从@Async案例找到Spring框架的bug：exposeProxy=true不生效原因大剖析+最佳解决方案【享学Spring】
+https://cloud.tencent.com/developer/article/1497700
+
+
+@Async 的实现：AsyncAnnotationBeanPostProcessor  也就是 BeanPosstProcessor
+
+
+AOP: 如@Transactional 等注解是自动代理创建器 JDK proxy, CGLIB
+
+
+Aop 代理创建
+【小家Spring】面向切面编程Spring AOP创建代理的方式：ProxyFactoryBean、ProxyFactory、AspectJProxyFactory（JDK Proxy和CGLIB）
+https://blog.csdn.net/f641385712/article/details/88926243
+
+【小家Spring】Spring AOP的核心类：AbstractAdvisorAutoProxy自动代理创建器深度剖析（AnnotationAwareAspectJAutoProxyCreator）
+https://blog.csdn.net/f641385712/article/details/88904983 
+
