@@ -74,3 +74,29 @@ https://blog.csdn.net/f641385712/article/details/88926243
 【小家Spring】Spring AOP的核心类：AbstractAdvisorAutoProxy自动代理创建器深度剖析（AnnotationAwareAspectJAutoProxyCreator）
 https://blog.csdn.net/f641385712/article/details/88904983 
 
+# 并发
+
+## fork/join
+
+ForkJoinPool大型图文现场（一阅到底 vs 直接收藏）
+https://segmentfault.com/a/1190000039267451
+
+ForkJoinPool使用介绍
+https://www.cnblogs.com/myseries/p/12582271.html
+
+聊聊 ForkJoinPool 及 ForkJoinTask （真正的 Fork/Join）
+https://juejin.cn/post/6990325499423621151
+
+Java 并发编程笔记：如何使用 ForkJoinPool 以及原理
+https://blog.dyngr.com/blog/2016/09/15/java-forkjoinpool-internals/
+
+
+
+
+
+
+
+
+
+
+
