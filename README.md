@@ -4,83 +4,29 @@
 
 # 资料
 
-一.前端VUE学习资源
-链接：https://pan.baidu.com/s/1ZMGQWyQE_MynyO3YciJ97A 
-提取码：ot3k 
-复制这段内容后打开百度网盘手机App，操作更方便哦
+# 厉害的博客
 
-二.前端架构师学习资源
-链接：https://pan.baidu.com/s/1Xpxj5dqdeFZ8YcR2IsKL0w 
-提取码：uck0 
-复制这段内容后打开百度网盘手机App，操作更方便哦
 
-后端学习资源：
-1.高效编程告别996
-链接：https://pan.baidu.com/s/1UO0322aFutbFoh-NjaB9aA 
-提取码：k36l
+学他写博客：
+https://www.cnkirito.moe/dubbo-gracefully-startup/
 
-2.Shiro
-链接：https://pan.baidu.com/s/1zOx-dkuaJc6X68ns51Uc3w 
-提取码：y3i3
+写清楚一件事情
 
-3.Spring
-链接：https://pan.baidu.com/s/1Azt74UnaHWe3snwlpvwUAA 
-提取码：olc4
+评论系统：https://valine.js.org/
 
-4.Mybatis
-链接：https://pan.baidu.com/s/1YjUXRUAew78H3cbQXOUd_Q 
-提取码：gy77 
+https://www.dazhuanlan.com/
 
-5.Spring Boot
-链接：https://pan.baidu.com/s/1o7B8NtTYRxrLwowYgKncsw 
-提取码：r3dj
+https://jaskey.github.io/blog/2018/08/15/rabbitmq-delay-queue/
 
-6.Spring Cloud
-链接：https://pan.baidu.com/s/1gV__wZ8ABU9cQvBpu21iJg 
-提取码：eglg
+信息安全 python 爬虫
+https://thief.one/
 
-7.Nginx
-链接：https://pan.baidu.com/s/1CKjKR_vhh2IkZh8Drp9rMw 
-提取码：u4hl
+Spirng 家
+http://www.itmuch.com/
 
-8.Redis
-链接：https://pan.baidu.com/s/1TlS1IYZkuE__SlWZFveOuw 
-提取码：jtr6
+https://blog.wuwii.com/
 
-9.ElasticSearch
-链接：https://pan.baidu.com/s/1cYP2TqUcPeZBocc67CRgRg 
-提取码：2ncj
-
-10.RabbitMQ
-链接：https://pan.baidu.com/s/18sIFM_L0SkBS_xhrVjEr7g 
-提取码：mzsc
-
-11.Linux
-链接：https://pan.baidu.com/s/1SBTVJxuFmv5fw9PNCKN4Ng 
-提取码：0ajd
-
-12.MySQL
-链接：https://pan.baidu.com/s/1nqXqdEmwuSV3pHMrSZQxUg 
-提取码：dqe4 
-
-13.网络之HTTP与HTTPS
-链接：https://pan.baidu.com/s/1fCaLN23X2R_1LpLA-BZkcw 
-提取码：eul0
-
-链接：https://pan.baidu.com/s/1aKgsvMw6-BtkwAiMjyDq8g 
-提取码：f12n
-
-14.并发编程
-链接：https://pan.baidu.com/s/1DWgac6W4IJ5Adw8ogZcUFw 
-提取码：134n
-
-二.前端学习资源：
-链接：https://pan.baidu.com/s/1Xpxj5dqdeFZ8YcR2IsKL0w 
-提取码：uck0 
-
-三. 数据结构与算法
-链接：https://pan.baidu.com/s/1OL-AhN7gvclrYlc-f14Enw 
-提取码：a2pa
+https://yelog.org/
 
 
 # 面试题
@@ -95,3 +41,62 @@ https://juejin.im/post/5d87985d6fb9a06add4e6ac3
 https://www.jianshu.com/p/2f7eb1ad7174
 史上最全的web前端面试题汇总及答案2
 史上最全的web前端面试题汇总及答案3
+
+# SpringBoot
+
+https://blog.csdn.net/qq_20597727/article/details/84868035
+spring源码阅读--@Transactional实现原理
+
+从@Async案例找到Spring框架的bug：exposeProxy=true不生效原因大剖析+最佳解决方案【享学Spring】
+https://cloud.tencent.com/developer/article/1497700
+
+
+SpringBoot 启动流程分析
+https://www.cnblogs.com/hello-shf/p/10976646.html
+SpringBoot启动流程分析（一）：SpringApplication类初始化过程
+
+
+涉及@Async AopContext 线程绑定
+从@Async案例找到Spring框架的bug：exposeProxy=true不生效原因大剖析+最佳解决方案【享学Spring】
+https://cloud.tencent.com/developer/article/1497700
+
+
+@Async 的实现：AsyncAnnotationBeanPostProcessor  也就是 BeanPosstProcessor
+
+
+AOP: 如@Transactional 等注解是自动代理创建器 JDK proxy, CGLIB
+
+
+Aop 代理创建
+【小家Spring】面向切面编程Spring AOP创建代理的方式：ProxyFactoryBean、ProxyFactory、AspectJProxyFactory（JDK Proxy和CGLIB）
+https://blog.csdn.net/f641385712/article/details/88926243
+
+【小家Spring】Spring AOP的核心类：AbstractAdvisorAutoProxy自动代理创建器深度剖析（AnnotationAwareAspectJAutoProxyCreator）
+https://blog.csdn.net/f641385712/article/details/88904983 
+
+# 并发
+
+## fork/join
+
+ForkJoinPool大型图文现场（一阅到底 vs 直接收藏）
+https://segmentfault.com/a/1190000039267451
+
+ForkJoinPool使用介绍
+https://www.cnblogs.com/myseries/p/12582271.html
+
+聊聊 ForkJoinPool 及 ForkJoinTask （真正的 Fork/Join）
+https://juejin.cn/post/6990325499423621151
+
+Java 并发编程笔记：如何使用 ForkJoinPool 以及原理
+https://blog.dyngr.com/blog/2016/09/15/java-forkjoinpool-internals/
+
+
+
+
+
+
+
+
+
+
+

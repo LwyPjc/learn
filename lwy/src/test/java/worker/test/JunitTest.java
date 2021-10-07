@@ -4,6 +4,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
+
 public class JunitTest {
 
     @Before
@@ -19,6 +23,19 @@ public class JunitTest {
     @Test
     public void test() {
         System.out.println("test");
+    }
+
+    @Test
+    public void test01(){
+
+        Instant now = Instant.now();
+        System.out.println(now);
+    }
+
+    @Test
+    public void test02(){
+        List<Integer> list = new ArrayList<>();
+        System.out.println();
     }
 
 

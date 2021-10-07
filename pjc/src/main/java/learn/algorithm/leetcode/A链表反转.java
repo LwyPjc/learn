@@ -28,7 +28,7 @@ public class A链表反转 {
         head.next.next.next.next.next.next = new ListNode(7);
         head.next.next.next.next.next.next.next = new ListNode(8);
 
-        ListNode listNode = reverseBetween(head, 2, 4);
+        ListNode listNode = reverseBetween(head, 1, 5);
         print(listNode);
     }
 
@@ -43,31 +43,28 @@ public class A链表反转 {
     public static ListNode reverseBetween(ListNode head, int left, int right) {
 
         ListNode leftNode = null;
-        ListNode cusr = head;
-        ListNode temp = null;
-        ListNode temp2 = null;
+        ListNode cursPre = null;
+        ListNode cusr = null;
 
-        for (int i = 1; i <= right; i++) {
-            if (i == left) {
+        ListNode listNode = new ListNode();
+        listNode.next = head;
+        cusr = listNode;
+
+        for (int i = 0; i <= right; i++) {
+            if (i + 1 == left) {
                 leftNode = cusr;
-                i++;
+                cursPre = cusr.next;
             }
-
-            if (i >= left && i <= right) {
-                temp = leftNode.next;
-                temp2 = cusr.next.next;
-                leftNode.next = cusr.next;
-                cusr.next.next = temp;
-                cusr.next = temp2;
-                cusr = cusr.next;
-                if (i == right) {
-                    break;
-                }
+            if (i > left && i <= right) {
+                cursPre.next = cusr.next;
+                cusr.next = leftNode.next;
+                leftNode.next = cusr;
+                cusr = cursPre.next;
             } else {
                 cusr = cusr.next;
             }
         }
-        return head;
+        return listNode.next;
     }
 
 }

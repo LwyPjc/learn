@@ -6,29 +6,24 @@ import goodbye996.lambda.demo1.sort.Sku;
 import org.junit.Test;
 import worker.test.Hanota;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.Assert.assertTrue;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-{
+public class AppTest {
     /**
      * Rigorous com.springsecurity.application.controller.Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void shouldAnswerWithTrue() {
+        assertTrue(true);
     }
 
     @Test
-    public void listTest(){
+    public void listTest() {
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
@@ -37,33 +32,33 @@ public class AppTest
     }
 
     @Test
-    public void hanota(){
+    public void hanota() {
         Hanota hanota = new Hanota();
         List<Integer> listA = new ArrayList<>();
-        for (int i = 0; i<10;i++){
+        for (int i = 0; i < 10; i++) {
             listA.add(i);
         }
         List<Integer> listB = new ArrayList<>();
         List<Integer> listC = new ArrayList<>();
 
-        hanota.hanota(listA,listB,listC);
-        System.out.println("次数： "+hanota.getCount());
+        hanota.hanota(listA, listB, listC);
+        System.out.println("次数： " + hanota.getCount());
         System.out.println(listC.toString());
     }
 
     @Test
-    public void test(){
-        if (2000>(int)2000.01){
+    public void test() {
+        if (2000 > (int) 2000.01) {
             System.out.println("2000.00>2000");
-        }else if (2000==(int)2000.01){
+        } else if (2000 == (int) 2000.01) {
             System.out.println("2000.00=2000");
-        }else{
+        } else {
             System.out.println("2000.00<2000");
         }
     }
 
     @Test
-    public void compareTest(){
+    public void compareTest() {
         List<Sku> cartLists = CartService.getCartSkuList();
         Collections.sort(cartLists, new Comparator<Sku>() {
             @Override
@@ -72,6 +67,104 @@ public class AppTest
             }
         });
 
-        System.out.println(JSON.toJSONString(cartLists,true));
+        System.out.println(JSON.toJSONString(cartLists, true));
+    }
+
+    @Test
+    public void randomTest() {
+        Random r = new Random(23);
+        //设置上限为100,下限为0，为了防止除数为0，做+1操作
+        int i = r.nextInt(100) + 1;
+        int j = r.nextInt(100) + 1;
+        float f = r.nextFloat();
+        System.out.println("i = " + i + ", j = " + j + ",f = " + f);
+    }
+
+    int n = 10;
+
+    @Test
+    public void breakTest() {
+
+        receive(n);
+    }
+
+    public void receive(int i) {
+        if (i > 0) {
+            if (i == 8) {
+                return;
+            }
+            receive(--i);
+            System.out.println("i = " + i);
+        }
+    }
+
+    @Test
+    public void arrayTest() {
+        final int[] arr = {1, 2};
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i + 2;
+        }
+        for (int a : arr) {
+            System.out.println(a);
+        }
+    }
+
+    @Test
+    public void array() {
+        int[] arr = new int[10];
+        System.out.println(arr.length);
+    }
+
+
+    public boolean isValid(String s) {
+        Queue<Character> queue = new ArrayDeque<>();
+        char[] chars = s.toCharArray();
+
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == '(' || chars[i] == '[' || chars[i] == '{')
+                queue.offer(chars[i]);
+            else if (chars[i] == ')' && queue.poll() == '(')
+                queue.remove();
+            else if (chars[i] == ']' && queue.peek() == '[')
+                queue.remove();
+            else if (chars[i] == '}' && queue.peek() == '{')
+                queue.remove();
+        }
+        if (queue.size() == 0)
+            return true;
+        return false;
+    }
+
+    @Test
+    public void testBrace() {
+        String s = "([)]";
+        System.out.println(testString(s));
+    }
+
+    /**
+     * leetcode 20题 有效括号
+     * @param str
+     * @return
+     */
+    public boolean testString(String str) {
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0;i<str.length();i++){
+            char c = str.charAt(i);
+            if (c=='('||c=='['||c=='{')
+                stack.push(c);
+            else if (stack.isEmpty()){
+                return false;
+            }else {
+                char top = stack.pop();
+                if (c==')'&&top!='(')
+                    return false;
+                if (c==']'&&top!='[')
+                    return false;
+                if (c=='}' && top!='}')
+                    return false;
+            }
+        }
+        return stack.isEmpty();
+
     }
 }

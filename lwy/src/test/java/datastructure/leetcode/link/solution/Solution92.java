@@ -63,24 +63,36 @@ public class Solution92 {
 
         Solution92 solution = new Solution92();
 
-        System.out.println(solution.reverseBetween(node1, 2, 4));
-        System.out.println(solution.reverseBetween(temp, 1, 2));
+//        System.out.println(solution.reverseBetween(node1, 2, 4));
+        System.out.println(solution.reverseBetween03(node1, 2, 4));
+//        System.out.println(solution.reverseBetween(temp, 1, 2));
 
     }
 
     public ListNode reverseBetween02(ListNode head, int left, int right) {
-        if (left >= right) {
-            return null;
-        }
 
+        ListNode dummyHead = new ListNode();
 
-        ListNode node = head;
-        while (left < right) {
-            reverseBetween02(head.next, left + 1, right - 1);
-//            if ()
-        }
-
-        //TODO
-        return null;
+        return dummyHead.next;
     }
+
+    public ListNode reverseBetween03(ListNode head, int left, int right) {
+        // 设置 dummyNode 是这一类问题的一般做法
+        ListNode dummyNode = new ListNode(-1);
+        dummyNode.next = head;
+        ListNode pre = dummyNode;
+        for (int i = 0; i < left - 1; i++) {
+            pre = pre.next;
+        }
+        ListNode cur = pre.next;
+        ListNode next;
+        for (int i = 0; i < right - left; i++) {
+            next = cur.next;
+            cur.next = next.next;
+            next.next = pre.next;
+            pre.next = next;
+        }
+        return dummyNode.next;
+    }
+
 }
